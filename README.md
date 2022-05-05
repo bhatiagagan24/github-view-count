@@ -9,10 +9,10 @@ Display the number of profile visits on your github profile with style!
 
 Allows changing the text color as well as the background color of this card.
 Embed this in your Github Readme, using the img HTML Tag.
-
-API Endpoint => /fetch/view/count
-
-Example:   <img src="<url>/fetch/view/count?bg-color=<background-color>&text-color=<text-color>">
+API Endpoint => /fetch/view/count?bg-color=<background-color>&text-color=<text-color>
+  
+Use the URL as an img source.
+  
 Adding bg_color and text_color to the URL is optional.
 
 Tech Stack: -
