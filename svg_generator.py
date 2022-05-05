@@ -17,9 +17,9 @@ class Svg_Generator:
 class View_Ops:
     def __init__(self):
         self.conn = redis.Redis(
-            host = os.environ.get('HOST'),
+            host = os.getenv('HOST'),
             port = '33015',
-            password = os.environ.get('PASSWORD'),
+            password = os.getenv('PASSWORD'),
             ssl = True
         )
     def increase_views(self):
