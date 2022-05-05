@@ -3,10 +3,10 @@ import flask
 
 from svg_generator import Svg_Generator, View_Ops
 
-api = Flask(__name__)
+app = Flask(__name__)
 
 
-@api.route("/fetch/view/count")
+@app.route("/fetch/view/count")
 def temp_method():
     view_ops_obj.increase_views()
     bg_color = "white" if request.args.get('bg-color') == None else request.args.get('bg-color')
@@ -18,4 +18,4 @@ def temp_method():
 if __name__ == '__main__':
     view_ops_obj = View_Ops()
     svg_gen_obj = Svg_Generator(view_obj=view_ops_obj)
-    api.run()
+    app.run()
